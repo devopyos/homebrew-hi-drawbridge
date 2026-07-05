@@ -1,17 +1,17 @@
 class HiDrawbridge < Formula
   desc "Linux hidraw to BatteryWatch D-Bus companion bridge"
   homepage "https://github.com/devopyos/hi-drawbridge"
-  version "0.1.0"
+  version "0.1.2"
 
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/devopyos/hi-drawbridge/releases/download/v#{version}/hi-drawbridge_#{version}_Linux_x86_64.tar.gz"
-      sha256 "482424b14d5d61b10077fc6b2f0394f4079c4eeb4d3d7dae736b5e5e91c8602b"
+      sha256 "1b998382c889ce119fbe1f87be1354c67aa5a6ee349320d06e3a362cb3b168bb"
     elsif Hardware::CPU.arm?
       url "https://github.com/devopyos/hi-drawbridge/releases/download/v#{version}/hi-drawbridge_#{version}_Linux_arm64.tar.gz"
-      sha256 "a69b4465d23a48862bb5f3608751663213f798a457f38520b7604af1a1f1b8a7"
+      sha256 "ae8320835fd7a39ca5198be2ca70aebb29306932c6b25a545ac763a7073fab8f"
     end
   end
 
